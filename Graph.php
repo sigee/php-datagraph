@@ -2,17 +2,14 @@
 	// 2017.01.08
 	// mokuska@dataglobe.eu
 
+	// directed graph without multiplicity
+
 	class Graph {
 	
-		private $type;
 		private $nodes = array();
 		private $edges = array();
 		
-		const UNDIRECTED = 0;
-		const DIRECTED = 1;
-		
-		public function __construct($type = self::UNDIRECTED) {
-			$this->type = $type;
+		public function __construct() {
 		}
 		
 		public function addNode(Node $node) {

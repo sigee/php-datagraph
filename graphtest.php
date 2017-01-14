@@ -2,7 +2,7 @@
 
 	require 'Graph.php';
 
-	$g = Graph::createGraph(Graph::DIRECTED);
+	$g = Graph::createGraph();
 	var_dump($g);
 
 	$g->addNode(Node::createNode('KÁLMÁN'));
@@ -33,7 +33,7 @@
 	echo "<hr />";
 
 	var_dump($g->isEdgeExists('NÁNDOR', 'BÉLA')); // should be TRUE
-	var_dump($g->isEdgeExists('BÉLA', 'NÁNDOR')); // should be TRUE if UNDIRECTED GRAPH, should be FALSE if DIRECTED GRAPH
+	var_dump($g->isEdgeExists('BÉLA', 'NÁNDOR')); // should be FALSE if DIRECTED GRAPH
 	var_dump($g->isEdgeExists('KÁLMÁN', 'BÉLA')); // should be FALSE
 	var_dump($g->isEdgeExists('BALÁZS', 'ZOLTÁN')); // should be FALSE
 
@@ -46,5 +46,9 @@
 	echo "<hr />";
 
 	$n = $g->getNode('NÁNDOR');
-	var_dump($n->getSources());
-	var_dump($n->getTargets());
+	var_dump($n->getSources()); // 'KÁLMÁN'
+	var_dump($n->getTargets()); // 'BÉLA'
+
+
+
+	
