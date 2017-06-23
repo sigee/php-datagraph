@@ -1,0 +1,4 @@
+/.idea/
+/vendor/
+/phpunit.coverage.xml
+/phpunit.report.xml
